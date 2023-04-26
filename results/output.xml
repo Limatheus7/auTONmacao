@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230426 10:26:55.026" rpa="false" schemaversion="3">
+<suite id="s1" name="ProjetoAutomacao" source="C:\ProjetoAutomacao">
+<suite id="s1-s1" name="Cenarios" source="C:\ProjetoAutomacao\Cenarios">
+<suite id="s1-s1-s1" name="MinhaLoja" source="C:\ProjetoAutomacao\Cenarios\MinhaLoja.robot">
+<test id="s1-s1-s1-t1" name="CT01 - Minha loja" line="7">
+<kw name="Open session" library="Base" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Android Emulator</arg>
+<arg>appPackage=br.com.stone.ton.preprd</arg>
+<arg>appActivity=br.com.stone.ton.MainActivity</arg>
+<arg>udid=emulator-5554</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<msg timestamp="20230426 10:26:59.516" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000014EA4C05B10&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /wd/hub/session</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" starttime="20230426 10:27:03.602" endtime="20230426 10:27:03.602"/>
+</kw>
+<msg timestamp="20230426 10:27:03.604" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<status status="FAIL" starttime="20230426 10:26:55.387" endtime="20230426 10:27:03.608"/>
+</kw>
+<status status="FAIL" starttime="20230426 10:26:55.386" endtime="20230426 10:27:03.609"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20230426 10:27:03.611" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20230426 10:27:03.611" endtime="20230426 10:27:03.621"/>
+</kw>
+<msg timestamp="20230426 10:27:03.622" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20230426 10:27:03.626" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20230426 10:27:03.610" endtime="20230426 10:27:03.627">No application is open</status>
+</kw>
+<status status="FAIL" starttime="20230426 10:26:55.384" endtime="20230426 10:27:03.628">Setup failed:
+Execution terminated by signal
+
+Also teardown failed:
+No application is open</status>
+</test>
+<status status="FAIL" starttime="20230426 10:26:55.081" endtime="20230426 10:27:03.631"/>
+</suite>
+<status status="FAIL" starttime="20230426 10:26:55.073" endtime="20230426 10:27:03.636"/>
+</suite>
+<status status="FAIL" starttime="20230426 10:26:55.040" endtime="20230426 10:27:03.639"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="ProjetoAutomacao">ProjetoAutomacao</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Cenarios">ProjetoAutomacao.Cenarios</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="MinhaLoja">ProjetoAutomacao.Cenarios.MinhaLoja</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230426 10:26:59.516" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000014EA4C05B10&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /wd/hub/session</msg>
+<msg timestamp="20230426 10:27:03.604" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<msg timestamp="20230426 10:27:03.622" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>
