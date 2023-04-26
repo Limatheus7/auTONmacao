@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230426 10:26:55.026" rpa="false" schemaversion="3">
-<suite id="s1" name="ProjetoAutomacao" source="C:\ProjetoAutomacao">
-<suite id="s1-s1" name="Cenarios" source="C:\ProjetoAutomacao\Cenarios">
-<suite id="s1-s1-s1" name="MinhaLoja" source="C:\ProjetoAutomacao\Cenarios\MinhaLoja.robot">
-<test id="s1-s1-s1-t1" name="CT01 - Minha loja" line="7">
-<kw name="Open session" library="Base" type="SETUP">
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230426 17:58:01.078" rpa="false" schemaversion="3">
+<suite id="s1" name="MinhaLoja" source="C:\AuTONmação\Cenarios\MinhaLoja.robot">
+<test id="s1-t1" name="CT01 - Realizar login e abrir o minha loja" line="8">
+<kw name="Dado que eu abro o aplicativo e realizo o login seller - CPF" library="base">
+<kw name="Open session" library="base">
 <kw name="Open Application" library="AppiumLibrary">
 <arg>http://localhost:4723/wd/hub</arg>
 <arg>automationName=UiAutomator2</arg>
@@ -20,54 +19,100 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<msg timestamp="20230426 10:26:59.516" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000014EA4C05B10&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /wd/hub/session</msg>
-<kw name="Capture Page Screenshot" library="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<status status="FAIL" starttime="20230426 10:27:03.602" endtime="20230426 10:27:03.602"/>
+<status status="PASS" starttime="20230426 17:58:01.560" endtime="20230426 17:58:16.671"/>
 </kw>
-<msg timestamp="20230426 10:27:03.604" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
-<status status="FAIL" starttime="20230426 10:26:55.387" endtime="20230426 10:27:03.608"/>
+<status status="PASS" starttime="20230426 17:58:01.560" endtime="20230426 17:58:16.671"/>
 </kw>
-<status status="FAIL" starttime="20230426 10:26:55.386" endtime="20230426 10:27:03.609"/>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${BTN_PERMISSAO}</arg>
+<arg>20</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230426 17:58:23.108" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button
+criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button
+criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button
+criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button
+criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button
+criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button
+criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button
+criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button
+criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button
+criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button
+criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button
+criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button
+criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button
+criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button
+criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button
+criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button
+criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button
+criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button</msg>
+<status status="PASS" starttime="20230426 17:58:16.671" endtime="20230426 17:58:23.109"/>
 </kw>
-<kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
-<doc>Closes the current application and also close webdriver session.</doc>
-<kw name="Capture Page Screenshot" library="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20230426 10:27:03.611" level="FAIL">No application is open</msg>
-<status status="FAIL" starttime="20230426 10:27:03.611" endtime="20230426 10:27:03.621"/>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BTN_PERMISSAO}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230426 17:58:23.112" level="INFO">Clicking element 'id=com.android.permissioncontroller:id/permission_allow_foreground_only_button'.</msg>
+<msg timestamp="20230426 17:58:23.366" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button</msg>
+<status status="PASS" starttime="20230426 17:58:23.109" endtime="20230426 17:58:23.366"/>
 </kw>
-<msg timestamp="20230426 10:27:03.622" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
-<msg timestamp="20230426 10:27:03.626" level="FAIL">No application is open</msg>
-<status status="FAIL" starttime="20230426 10:27:03.610" endtime="20230426 10:27:03.627">No application is open</status>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${BTN_ENTRAR}</arg>
+<arg>20</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230426 17:58:25.135" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]</msg>
+<status status="PASS" starttime="20230426 17:58:23.366" endtime="20230426 17:58:25.135"/>
 </kw>
-<status status="FAIL" starttime="20230426 10:26:55.384" endtime="20230426 10:27:03.628">Setup failed:
-Execution terminated by signal
-
-Also teardown failed:
-No application is open</status>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>${BTN_ENTRAR}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<msg timestamp="20230426 17:58:25.296" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]</msg>
+<status status="PASS" starttime="20230426 17:58:25.136" endtime="20230426 17:58:25.296"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BTN_ENTRAR}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230426 17:58:25.298" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]'.</msg>
+<msg timestamp="20230426 17:58:25.501" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]</msg>
+<status status="PASS" starttime="20230426 17:58:25.296" endtime="20230426 17:58:25.501"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${INPUT_EMAIL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230426 17:58:26.752" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText</msg>
+<status status="PASS" starttime="20230426 17:58:25.501" endtime="20230426 17:58:26.753"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${INPUT_EMAIL}</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230426 17:58:26.756" level="INFO">Typing text 'matheus.lperes+preprd+920+giga@stone.com.br' into text field 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText'</msg>
+<msg timestamp="20230426 17:58:26.950" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText</msg>
+<status status="PASS" starttime="20230426 17:58:26.753" endtime="20230426 17:58:26.950"/>
+</kw>
+<kw name="Input Password" library="AppiumLibrary">
+<arg>${INPUT_SENHA}</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given password into text field identified by `locator`.</doc>
+<msg timestamp="20230426 17:58:26.953" level="INFO">Typing password into text field 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText'</msg>
+<msg timestamp="20230426 17:58:27.945" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText</msg>
+<status status="PASS" starttime="20230426 17:58:26.950" endtime="20230426 17:58:27.945"/>
+</kw>
+<status status="PASS" starttime="20230426 17:58:01.559" endtime="20230426 17:58:27.945"/>
+</kw>
+<status status="PASS" starttime="20230426 17:58:01.558" endtime="20230426 17:58:27.946"/>
 </test>
-<status status="FAIL" starttime="20230426 10:26:55.081" endtime="20230426 10:27:03.631"/>
-</suite>
-<status status="FAIL" starttime="20230426 10:26:55.073" endtime="20230426 10:27:03.636"/>
-</suite>
-<status status="FAIL" starttime="20230426 10:26:55.040" endtime="20230426 10:27:03.639"/>
+<status status="PASS" starttime="20230426 17:58:01.081" endtime="20230426 17:58:27.949"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="ProjetoAutomacao">ProjetoAutomacao</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Cenarios">ProjetoAutomacao.Cenarios</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="MinhaLoja">ProjetoAutomacao.Cenarios.MinhaLoja</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="MinhaLoja">MinhaLoja</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230426 10:26:59.516" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000014EA4C05B10&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /wd/hub/session</msg>
-<msg timestamp="20230426 10:27:03.604" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
-<msg timestamp="20230426 10:27:03.622" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
 </errors>
 </robot>

@@ -1,12 +1,16 @@
 *** Settings ***
-Resource                          ${EXECDIR}${/}Resources${/}Base.robot                        
-Test Setup                        Open sessions
-Test Teardown                     Close Application
+Library                           AppiumLibrary
+Resource                          ${EXECDIR}${/}Resources${/}base.robot                        
+##Test Setup                      Open session
+##Test Teardown                     Close Application
 
 *** Test Cases ***
-CT01 - Abrir a feature do minha loja 
+CT01 - Realizar login e abrir o minha loja 
     Dado que eu abro o aplicativo e realizo o login seller - CPF
-CT02 - A
+    ##E estou na tela principal
+    ##Então abro o minha loja
+##CT02 - Validar texto  
+    
 
 
 
