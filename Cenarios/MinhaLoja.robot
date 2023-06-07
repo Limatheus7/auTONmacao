@@ -2,7 +2,7 @@
 Library                           AppiumLibrary
 Resource                          ${EXECDIR}${/}Resources${/}base.robot                        
 ##Test Setup                      Open session
-##Test Teardown                     Close Application
+##Test Teardown                   Close Application
 
 *** Test Cases ***
 CT01 - Cadastro de novo produto sem foto no minha loja 
@@ -18,7 +18,8 @@ CT01 - Cadastro de novo produto sem foto no minha loja
     ##Então visualizo o produto cadastrado na tela catalogo
 
 ##CT02 - Cadastro de produto com foto 
-##CT03 - 
+##CT03 - Editar produto 
+##CT04 - Excluir produto 
     
 
 
